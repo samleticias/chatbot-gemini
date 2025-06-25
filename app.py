@@ -78,19 +78,13 @@ def receber_mensagem(dados):
         emit("resposta_servidor", {"resposta": f"Houve um problema: {erro}"})
 
 # Rota principal da aplicação
-# @app_web.route("/")
-# def pagina_inicial():
-#     return render_template("index.html")
 @app_web.route("/")
 def pagina_inicial():
-    try:
-        return render_template("index.html")
-    except Exception as e:
-        return f"Erro ao renderizar template: {e}", 500
+    return render_template("index.html")
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    socket_io.run(app_web, host="0.0.0.0", port=port)
+if __name__ == '__main__':
+    porta = int(os.getenv("PORT", 5000))
+    socket_io.run(app_web, host='0.0.0.0', port=porta, debug=True)
 
 app = app_web
 socketio = socket_io
