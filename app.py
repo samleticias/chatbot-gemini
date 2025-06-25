@@ -78,9 +78,15 @@ def receber_mensagem(dados):
         emit("resposta_servidor", {"resposta": f"Houve um problema: {erro}"})
 
 # Rota principal da aplicação
+# @app_web.route("/")
+# def pagina_inicial():
+#     return render_template("index.html")
 @app_web.route("/")
 def pagina_inicial():
-    return render_template("index.html")
+    try:
+        return render_template("index.html")
+    except Exception as e:
+        return f"Erro ao renderizar template: {e}", 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
