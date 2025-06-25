@@ -1,0 +1,7 @@
+flask
+flask-socketio
+eventlet
+python-dotenv
+google-generativeai
+pillow
+pymupdf

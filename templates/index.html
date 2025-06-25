@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ConsultAI Chat</title>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>ConsultAI</h1>
+    </header>
+
+    <main>
+        <section id="chat-wrapper">
+            <div id="chat-box"></div>
+
+            <form id="chat-form">
+                <div id="attachment-preview" class="hidden">
+                    <img id="attachment-image" src="#" alt="Preview da imagem" />
+                    <span id="attachment-pdf-name"></span>
+                    <button type="button" id="remove-attachment">&times;</button>
+                </div>
+
+                <div id="input-area">
+                     <button type="button" id="attachment-btn" title="Anexar arquivo" aria-label="Anexar arquivo">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M21.44 11.05l-8.49 8.49a5.5 5.5 0 01-7.78-7.78l9.19-9.19a3 3 0 014.24 4.24L9.88 17.12" />
+                    </svg>
+                    </button>
+
+                    <div id="attachment-menu" class="hidden">
+                        <button type="button" id="attach-image-btn">Imagem</button>
+                        <button type="button" id="attach-pdf-btn">PDF</button>
+                    </div>
+
+                    <input type="file" id="file-input" class="hidden" />
+
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Digite uma mensagem ou adicione um arquivo para enviar..."
+                        autocomplete="off"
+                    />
+
+                    <button type="submit" title="Enviar mensagem" id="send-button" aria-label="Enviar mensagem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por <strong>Sammya Letícia</strong> &copy; 2025</p>
+        <div class="footer-links">
+            <a href="https://github.com/samleticias" target="_blank" aria-label="Perfil no GitHub" title="Meu GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.29 3.438 9.773 8.205 11.36.6.111.82-.261.82-.58
+                    0-.287-.01-1.045-.016-2.05-3.338.726-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.757-1.333-1.757
+                    -1.09-.746.082-.731.082-.731 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997
+                    .108-.775.418-1.305.762-1.605-2.665-.304-5.467-1.332-5.467-5.932 0-1.31.468-2.38 1.235-3.22
+                    -.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005
+                    2.047.138 3.003.403 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176
+                    .77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.922.43.372.814 1.102.814 2.222
+                    0 1.604-.015 2.896-.015 3.293 0 .321.216.694.825.577C20.565 22.27 24 17.79 24 12.5
+                    24 5.87 18.63.5 12 .5z"/>
+                </svg>
+            </a>
+
+            <a href="https://github.com/samleticias/chatbot-gemini" target="_blank" aria-label="Repositório do Projeto" title="Repositório do Projeto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 24 24">
+                    <path d="M10 4H2v16h20V6H12l-2-2z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
