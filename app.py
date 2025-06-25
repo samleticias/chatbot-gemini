@@ -82,9 +82,9 @@ def receber_mensagem(dados):
 def pagina_inicial():
     return render_template("index.html")
 
-app = app_web
-socketio = socket_io
-
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     socket_io.run(app_web, host="0.0.0.0", port=port)
+
+app = app_web
+socketio = socket_io
