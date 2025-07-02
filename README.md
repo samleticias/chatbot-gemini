@@ -1,14 +1,10 @@
-# 🤖 ConsultAI - Chatbot Gemini
+# ConsultAI - Chatbot Gemini
 
 Chatbot interativo com suporte a texto, imagem e PDF, alimentado pela API do Google Gemini (via Generative AI). Projetado com Flask, Socket.IO e uma interface web interativa.
-
----
 
 ## Descrição
 
 **ConsultAI** é um assistente virtual. Ele conversa em português do Brasil, responde com educação e confiabilidade, e pode interpretar tanto mensagens de texto quanto arquivos de imagem e PDF.
-
----
 
 ## Funcionalidades
 
@@ -18,8 +14,6 @@ Chatbot interativo com suporte a texto, imagem e PDF, alimentado pela API do Goo
 -  Comunicação em tempo real via WebSocket (Socket.IO)
 -  Histórico de conversa mantido por sessão
 -  Mensagens formatadas com preview de anexos
-
----
 
 ## Tecnologias Utilizadas
 
@@ -39,8 +33,6 @@ Chatbot interativo com suporte a texto, imagem e PDF, alimentado pela API do Goo
 - `style.css` e `script.js` em `/static/`
 - Preview de anexos (imagens/PDF)
 - Ícones SVG embutidos
-
----
 
 ## Estrutura do Projeto
 ```
