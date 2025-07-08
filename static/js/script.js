@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let tempAttachment = null;
 
+  function aplicarFormatacaoMarkdown(texto) {
+    return marked.parse(texto);
+  }
+
   // Toggle do menu
   attachmentBtn.addEventListener("click", () => {
     attachmentMenu.classList.toggle("hidden");
@@ -101,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (text) {
       const p = document.createElement("p");
-      p.textContent = text;
+      p.innerHTML = aplicarFormatacaoMarkdown(text);
       div.appendChild(p);
     }
 
