@@ -34,17 +34,19 @@
                 </div>
 
                 <div id="input-area">
-                     <button type="button" id="attachment-btn" title="Anexar arquivo" aria-label="Anexar arquivo">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        viewBox="0 0 24 24" width="20" height="20">
-                        <path d="M21.44 11.05l-8.49 8.49a5.5 5.5 0 01-7.78-7.78l9.19-9.19a3 3 0 014.24 4.24L9.88 17.12" />
-                    </svg>
-                    </button>
+                    <div id="attachment-container" style="position: relative; display: inline-block;">
+                        <button type="button" id="attachment-btn" title="Anexar arquivo" aria-label="Anexar arquivo">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M21.44 11.05l-8.49 8.49a5.5 5.5 0 01-7.78-7.78l9.19-9.19a3 3 0 014.24 4.24L9.88 17.12" />
+                        </svg>
+                        </button>
 
-                    <div id="attachment-menu" class="hidden">
-                        <button type="button" id="attach-image-btn">Imagem</button>
-                        <button type="button" id="attach-pdf-btn">PDF</button>
+                        <div id="attachment-menu" class="hidden">
+                            <button type="button" id="attach-image-btn">Imagem</button>
+                            <button type="button" id="attach-pdf-btn">PDF</button>
+                        </div>
                     </div>
 
                     <input type="file" id="file-input" class="hidden" />

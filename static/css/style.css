@@ -178,17 +178,35 @@ button[type="submit"]:hover {
     display: none !important;
 }
 
+/* #attachment-menu {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  transform: translateX(0);
+  background-color: #30363d;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+  min-width: 120px;
+} */
+
 #attachment-menu {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    background-color: #30363d;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 100;
+  position: absolute;
+  bottom: 100%; /* posiciona acima do botão */
+  left: 0;
+  margin-bottom: 8px; /* espaçamento entre botão e menu */
+  background-color: #30363d;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+  min-width: 120px;
+  transform: none; 
 }
 
 #attachment-menu button {
@@ -399,5 +417,12 @@ footer a:hover {
   .footer-links {
     flex-wrap: wrap;
     gap: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  #attachment-menu {
+    right: 5px;
+    min-width: 100px;
   }
 }
