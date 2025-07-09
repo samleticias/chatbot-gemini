@@ -106,24 +106,6 @@ main {
     margin-top: 8px;
 }
 
-/* #chat-form {
-    padding: 12px 20px;
-    background-color: #0d1117;
-    border-top: 1px solid #30363d;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-#input-area {
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-} */
-
 #chat-form {
   display: flex;
   align-items: center;
@@ -173,20 +155,6 @@ button[type="submit"]:hover {
     background-color: #238636;
     color: white;
 }
-
-/* #attachment-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #58a6ff;
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
-    margin-right: 8px;
-} */
 
 #attachment-btn {
   background: none;
@@ -369,11 +337,6 @@ footer a:hover {
     gap: 8px;
   }
 
-  /* #message-input {
-    flex: 1 1 100%;
-    padding: 10px 14px;
-    font-size: 1rem;
-  } */
     #message-input {
         flex-grow: 1;
         min-width: 0; /* ESSENCIAL para evitar quebra no mobile */
@@ -385,12 +348,6 @@ footer a:hover {
         font-size: 1rem;
         outline-offset: 2px;
     }
-
-  /* #send-button {
-    width: 40px;
-    height: 40px;
-    margin-left: 0;
-  } */
 
   #send-button {
     background-color: #58a6ff;
