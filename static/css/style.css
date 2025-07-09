@@ -106,7 +106,7 @@ main {
     margin-top: 8px;
 }
 
-#chat-form {
+/* #chat-form {
     padding: 12px 20px;
     background-color: #0d1117;
     border-top: 1px solid #30363d;
@@ -122,6 +122,25 @@ main {
     display: flex;
     flex-grow: 1;
     align-items: center;
+} */
+
+#chat-form {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #0d1117;
+  border-top: 1px solid #30363d;
+  flex-shrink: 0;
+}
+
+#input-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: 0; /* para permitir que o input encolha */
 }
 
 #message-input {
@@ -155,7 +174,7 @@ button[type="submit"]:hover {
     color: white;
 }
 
-#attachment-btn {
+/* #attachment-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -167,6 +186,20 @@ button[type="submit"]:hover {
     border-radius: 6px;
     transition: background-color 0.2s ease;
     margin-right: 8px;
+} */
+
+#attachment-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #58a6ff;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
 }
 
 #attachment-btn:hover {
@@ -336,16 +369,44 @@ footer a:hover {
     gap: 8px;
   }
 
-  #message-input {
+  /* #message-input {
     flex: 1 1 100%;
     padding: 10px 14px;
     font-size: 1rem;
-  }
+  } */
+    #message-input {
+        flex-grow: 1;
+        min-width: 0; /* ESSENCIAL para evitar quebra no mobile */
+        background-color: #161b22;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 20px;
+        color: #c9d1d9;
+        font-size: 1rem;
+        outline-offset: 2px;
+    }
 
-  #send-button {
+  /* #send-button {
     width: 40px;
     height: 40px;
     margin-left: 0;
+  } */
+
+  #send-button {
+    background-color: #58a6ff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(88, 166, 255, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    color: white;
+    padding: 0;
+    flex-shrink: 0;
   }
 
   #attachment-menu {
